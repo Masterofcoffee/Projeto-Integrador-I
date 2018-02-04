@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class PIYury {
+public class PIYuryBobao {
 
     public static void main(String[] args) {
         menu();
@@ -14,8 +14,8 @@ public class PIYury {
 
         do {
             System.out.println("\tBem-vindo. Escolha o processo que deseja realizar: ");
-            System.out.println("1. Codificar/Decodificar Cifra de CÈsar");
-            System.out.println("2. Convers„o de Decimal/Bin·rio/Hexadecimal");
+            System.out.println("1. Codificar/Decodificar Cifra de C√©sar");
+            System.out.println("2. Convers√£o de Decimal/Bin√°rio/Hexadecimal");
             System.out.println("Selecione:\n");
             selecao = input.nextInt();
 
@@ -27,7 +27,7 @@ public class PIYury {
                     conv();
                     break;
                 default:
-                    System.err.println("Entrada inv·lida.");
+                    System.err.println("Entrada inv√°lida.");
             }
         } while (selecao != 0);
 
@@ -40,9 +40,9 @@ public class PIYury {
         int selecao = 0;
 
         do {
-            System.out.println("\tVocÍ entrou no menu interativo para codificar e decodificar! Selecione:");
-            System.out.println("1. Codificar/Decodificar Cifra de CÈsar (TXT)");
-            System.out.println("2. Codificar/Decodificar Cifra de CÈsar");
+            System.out.println("\tVoc√™ entrou no menu interativo para codificar e decodificar! Selecione:");
+            System.out.println("1. Codificar/Decodificar Cifra de C√©sar (TXT)");
+            System.out.println("2. Codificar/Decodificar Cifra de C√©sar");
             System.out.println("3. Voltar para o menu anterior");
             System.out.println("4. Sair do programa");
             selecao = input.nextInt();
@@ -61,7 +61,7 @@ public class PIYury {
                     System.out.println("Adeus!");
                     System.exit(0);
                 default:
-                    System.err.println("Entrada inv·lida.");
+                    System.err.println("Entrada inv√°lida.");
             }
 
         } while (selecao != 0);
@@ -95,7 +95,7 @@ public class PIYury {
                     System.out.println("Adeus!");
                     System.exit(0);
                 default:
-                    System.err.println("Entrada inv·lida.");
+                    System.err.println("Entrada inv√°lida.");
             }
 
         } while (selecao != 0);
@@ -130,7 +130,7 @@ public class PIYury {
                     System.out.println("Adeus!");
                     System.exit(0);
                 default:
-                    System.err.println("Entrada inv·lida.");
+                    System.err.println("Entrada inv√°lida.");
             }
 
         } while (selecao != 0);
@@ -147,7 +147,7 @@ public class PIYury {
 
         System.out.println("Insira o caminho do arquivo txt:");
         String original = input.nextLine();
-        System.out.println("Insira o n˙mero de deslocamento:");
+        System.out.println("Insira o n√∫mero de deslocamento:");
         k = input.nextInt();
 
         for (char ch : original.toLowerCase().toCharArray()) {
@@ -177,18 +177,18 @@ public class PIYury {
         int k = 0;
         // shift
         StringBuilder resultado = new StringBuilder();
-        // String mut·vel
+        // String mut√°vel
 
         System.out.println("Insira o texto:");
         String original = input.nextLine();
         // Texto a ser cifrado
-        System.out.println("Insira o n˙mero de deslocamento:");
+        System.out.println("Insira o n√∫mero de deslocamento:");
         k = input.nextInt();
         // Shift
 
         // for each para cada caracter da string ORIGINAL
         for (char ch : original.toCharArray()) {
-            // se um dos caracteres inseridos pelo usu·rio for espaÁo, CONCATENA um espaÁo no SYSOUT
+            // se um dos caracteres inseridos pelo usu√°rio for espa√ßo, CONCATENA um espa√ßo no SYSOUT
             if (ch == ' ') {
                 resultado.append(' ');
                 continue;
@@ -224,7 +224,7 @@ public class PIYury {
 
         System.out.println("Insira o texto:");
         String original = input.nextLine();
-        System.out.println("Insira o n˙mero de deslocamento:");
+        System.out.println("Insira o n√∫mero de deslocamento:");
         k = input.nextInt();
 
         for (char ch : original.toLowerCase().toCharArray()) {
@@ -259,20 +259,20 @@ public class PIYury {
 
         do {
             System.out.println(
-                    "\tVocÍ entrou no menu interativo para converter n˙meros decimais/bin·rios/hexadecimais, escolha:");
-            System.out.println("1. Bin·rio ---> Decimal");
-            System.out.println("2. Bin·rio ---> Hexadecimal");
-            System.out.println("3. Decimal ---> Bin·rio");
+                    "\tVoc√™ entrou no menu interativo para converter n√∫meros decimais/bin√°rios/hexadecimais, escolha:");
+            System.out.println("1. Bin√°rio ---> Decimal");
+            System.out.println("2. Bin√°rio ---> Hexadecimal");
+            System.out.println("3. Decimal ---> Bin√°rio");
             System.out.println("4. Decimal ---> Hexadecimal");
             System.out.println("5. Hexadecimal ---> Decimal");
-            System.out.println("6. Hexadecimal ---> Bin·rio");
+            System.out.println("6. Hexadecimal ---> Bin√°rio");
             System.out.println("7. Voltar ao menu anterior");
             System.out.println("8. Sair do programa");
             selecao = input.nextInt();
 
             switch (selecao) {
                 case 1:
-                    System.out.println("Insira o valor (bin·rio) para converter para decimal:");
+                    System.out.println("Insira o valor (bin√°rio) para converter para decimal:");
                     String n1 = input.next();
                     int potencia = 0,
                      binPDecimal = 0;
@@ -280,10 +280,10 @@ public class PIYury {
                         binPDecimal += Math.pow(2, potencia) * Character.getNumericValue(n1.charAt(i));
                         potencia++;
                     }
-                    System.out.println(n1 + "(bin·rio) em decimal È: " + binPDecimal);
+                    System.out.println(n1 + "(bin√°rio) em decimal √©: " + binPDecimal);
                     break;
                 case 2:
-                    System.out.println("Insira o valor (bin·rio) para converter para hexadecimal:");
+                    System.out.println("Insira o valor (bin√°rio) para converter para hexadecimal:");
                     String n2 = input.next();
                     int potenciahex = 0,
                      decimal = 0;
@@ -301,11 +301,11 @@ public class PIYury {
                         binPHex = digitos.charAt(digito) + binPHex;
                         decimal = decimal / base;
                     }
-                    System.out.println(n2 + "(bin·rio) em hexadecimal È: " + binPHex);
+                    System.out.println(n2 + "(bin√°rio) em hexadecimal √©: " + binPHex);
 
                     break;
                 case 3:
-                    System.out.println("Insira o valor (decimal) para converter para bin·rio:");
+                    System.out.println("Insira o valor (decimal) para converter para bin√°rio:");
                     int n3 = input.nextInt();
                     StringBuilder binario = new StringBuilder(); // guarda os dados
                     while (n3 > 0) {
@@ -329,7 +329,7 @@ public class PIYury {
                     }
                     System.out.println(hexa);
                     //String decPHex = Integer.toHexString(n4);
-                    //System.out.println(n4 + "\t (decimal) em hexadecimal È: " + decPHex);
+                    //System.out.println(n4 + "\t (decimal) em hexadecimal √©: " + decPHex);
                     break;
                 case 5:
                     String digitoshex2dec = "0123456789ABCDEF", hexadecimal = "";
@@ -340,11 +340,11 @@ public class PIYury {
                     
                     break;
                 case 6:
-                    System.out.println("Insira o valor (hexadecimal) para converter para bin·rio:");
+                    System.out.println("Insira o valor (hexadecimal) para converter para bin√°rio:");
                     String n6 = input.next();
                     int i = Integer.parseInt(n6, 16);
                     String hexPBin = Integer.toBinaryString(i);
-                    System.out.println(n6 + "(hexadecimal) para bin·rio È " + hexPBin);
+                    System.out.println(n6 + "(hexadecimal) para bin√°rio √© " + hexPBin);
                     break;
                 case 7:
                     menu();
@@ -354,7 +354,7 @@ public class PIYury {
                     System.exit(0);
 
                 default:
-                    System.err.println("Entrada inv·lida.");
+                    System.err.println("Entrada inv√°lida.");
             }
 
         } while (selecao
